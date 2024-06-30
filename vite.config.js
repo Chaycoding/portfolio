@@ -11,5 +11,5 @@ export default defineConfig({
       include: ["./src/**/*.jsx", "./src/**/*.js"],
     }),
   ],
-  server: "/portfolio/",
+  base: "/portfolio/",
 });
