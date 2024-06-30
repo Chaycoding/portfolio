@@ -6,7 +6,7 @@ function Newestposts() {
     <div key="1" className="grid grid-cols-1 relative h-full px-1">
       <div className="w-full bg-blogsite bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
       <h1 className="text-xl text-center">
-        Blogsite <span className="font-bold">(Fullstack)</span>
+        Blogsite <span className="font-bold">- Fullstack</span>
       </h1>
       <p className="text-base  font-mono leading-4">
         Skills used - React, Mongodb, Mongoose, Express.js, Node.js, Javascript,
@@ -51,7 +51,7 @@ function Newestposts() {
     <div key="2" className="grid grid-cols-1 relative h-full px-1">
       <div className="w-full bg-compassion bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
       <h1 className="text-xl text-center">
-        Compassion project <span className="font-bold">(Fullstack)</span>
+        Compassion project <span className="font-bold">- Fullstack</span>
       </h1>
       <p className="text-base  font-mono leading-4">
         Skills used - React, Mongodb, Express.js, Node.js, CSS, Bootstrap
@@ -352,7 +352,7 @@ function Newestposts() {
         </div>
       </div>
       <div className=" mt-40">
-        Beginner projects (kinda)
+        Beginner projects
         <div className="grid grid-cols-3 gap-y-14 gap-x-10 ">
           {beginnerProjects.map((item, i) => (
             <Card key={i} text={item} index={i} />

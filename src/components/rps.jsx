@@ -58,7 +58,7 @@ function Rockps() {
   }
 
   return (
-    <div className="pb-[150rem]">
+    <div className="pb-[150rem] text-white text-xl">
       <div className="selections">
         <button className="selection" data-selection="rock">
           <>&#9994;</>
