@@ -5,19 +5,19 @@ function Rockps() {
   const finalColumn = document.querySelector("[data-final-column]");
   const SELECTIONS = [
     {
-      name: "rock",
+      name: "Rock",
       emoji: "rock",
-      beats: "scissor",
+      beats: "Scissor",
     },
     {
-      name: "paper",
+      name: "Paper",
       emoji: "paper",
-      beats: "rock",
+      beats: "Rock",
     },
     {
-      name: "scissor",
+      name: "Scissor",
       emoji: "scissor",
-      beats: "paper",
+      beats: "Paper",
     },
   ];
 
@@ -60,13 +60,13 @@ function Rockps() {
   return (
     <div className="pb-[150rem] text-white text-xl">
       <div className="selections">
-        <button className="selection" data-selection="rock">
+        <button className="selection" data-selection="Rock">
           <>&#9994;</>
         </button>
-        <button className="selection" data-selection="scissor">
+        <button className="selection" data-selection="Scissor">
           <>&#9996;</>
         </button>
-        <button className="selection" data-selection="paper">
+        <button className="selection" data-selection="Paper">
           <>&#9995;</>
         </button>
       </div>
