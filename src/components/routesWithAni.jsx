@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Rockps from "./rps";
 import ContactPage from "./Contact";
-import FlutterTask from "./fluttertask";
+
 import ProjectPage from "./projectpage";
 
 function RoutesWithAni() {
@@ -27,7 +27,7 @@ function RoutesWithAni() {
         <Route path="/" element={<Mainpage isFirstMount={isFirstMount} />} />
         <Route path="/rps" element={<Rockps />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/fluttertaskapp" element={<FlutterTask />} />
+
         <Route path="/projectpage/:id" element={<ProjectPage />} />
       </Routes>
       <Footer />

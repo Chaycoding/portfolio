@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ImageCarousel from "./imagecarousel";
 function ProjectPage() {
   const projects = {
     1: [
@@ -169,29 +170,10 @@ function ProjectPage() {
         Additionally the list will be saved in storage such that you can access
         it even after you close and reopen the app.
       </p>,
-      <div
-        key="2"
-        className="w-full grid grid-cols-3 rounded-xl h-40 overflow-hidden"
-      >
-        <div className=" bg-fluttertask1  z-10  w-28 bg-right-top  bg-cover "></div>
-        <div className=" bg-fluttertask2 bg-right-top z-10  w-28  bg-cover "></div>
-        <div className=" bg-fluttertask3 bg-right-top z-10   w-28 bg-cover "></div>
-      </div>,
-      <Link
-        key="2"
-        to="/fluttertaskapp"
-        className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-      >
-        <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-          <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-          <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-          <span className="relative font-bold">See project</span>
-        </span>
-        <span
-          className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-          data-rounded="rounded-lg"
-        ></span>
-      </Link>,
+      <ImageCarousel
+        key="3"
+        list={["fluttertask1", "fluttertask2", "fluttertask3"]}
+      />,
     ],
     5: [
       "A very simple rock paper scissor game",
@@ -323,6 +305,20 @@ function ProjectPage() {
           data-rounded="rounded-lg"
         ></span>
       </a>,
+    ],
+    9: [
+      "Notes app",
+      "Skills used - Flutter",
+      "",
+      <p key="2" className="text-lg">
+        This is more of an extended version of my tasks app. It is a more
+        profound, simple and rather useful app I needed.
+      </p>,
+
+      <ImageCarousel
+        key="3"
+        list={["flutternotes2", "flutternotes1", "flutternotes3"]}
+      />,
     ],
   };
   const url = window.location.href;
