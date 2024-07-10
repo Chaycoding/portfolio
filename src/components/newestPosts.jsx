@@ -197,6 +197,34 @@ function Newestposts() {
         Flutter app
       </div>
     </div>,
+    <div key="7" className="grid grid-cols-1 relative h-full px-1">
+      <div className="w-full bg-japanbirth2 bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
+      <h1 className="text-xl text-center">
+        Data analysis on the birth rate in Japan
+      </h1>
+      <p className="text-base text-center font-mono leading-4">
+        Skills used - Python, Pandas, Matplotlib
+      </p>
+      <div className="flex justify-center h-8  ">
+        <Link
+          to="/projectpage/10"
+          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
+        >
+          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
+            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+            <span className="relative font-bold">More details</span>
+          </span>
+          <span
+            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+            data-rounded="rounded-lg"
+          ></span>
+        </Link>
+      </div>
+      <div className="absolute z-10 right-0 bg-violet-700 rounded-lg text-base w-28 text-center  px-2">
+        Data analysis
+      </div>
+    </div>,
     <div key="2" className="grid grid-cols-1 h-full px-1">
       <div className="w-full bg-rps bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
       <h1 className="text-xl text-center">A Simple Rock Paper Scissor Game</h1>
@@ -360,7 +388,7 @@ function Newestposts() {
     <div className="mt-10 grid grid-cols-1 mx-28 ">
       <div className="h-24 w-24"></div>
       <div>
-        Intermediate/ solid projects
+        Intermediate projects
         <div className="grid grid-cols-3 gap-y-14 gap-x-10">
           {intermediateList.map((item, i) => (
             <Card key={i} text={item} index={i} />

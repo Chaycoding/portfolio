@@ -317,22 +317,90 @@ function ProjectPage() {
 
       <ImageCarousel
         key="3"
-        list={["flutternotes2", "flutternotes1", "flutternotes3"]}
+        // id={id}
+        list={["flutternotes2", "flutternotes3", "flutternotes1"]}
+      />,
+    ],
+    10: [
+      "Data analysis on the birth rate in Japan",
+      "Skills used - Python, Pandas, Matplotlib",
+      "",
+      <div key="2" className="text-lg">
+        This is an analysis of the dataset presented on kaggle on the births in
+        Japan. With Japan's declining population knowing the rate at which the
+        population is going down will greatly aid in estimating when critical
+        levels will reached in the future. Understanding population statistics
+        will in identification of the variables that impact the rate of births.
+        <br />
+        <br />
+        <br />
+        The analysis was done in a very simple manner using matplotlib and
+        pandas. A kaggle notebook is available to view the code -
+        <div className="flex justify-between mt-10">
+          <a
+            href="https://www.kaggle.com/code/geraltgurusinghe/japan-birth-statistic-analysis"
+            target="_blank"
+            rel="noreferrer"
+            className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
+          >
+            <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+              <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
+              <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+              <span className="relative font-bold text-lg">
+                Check the code!
+              </span>
+            </span>
+            <span
+              className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+              data-rounded="rounded-lg"
+            ></span>
+          </a>
+          <a
+            href="https://www.kaggle.com/datasets/webdevbadger/japan-birth-statistics"
+            target="_blank"
+            rel="noreferrer"
+            className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
+          >
+            <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+              <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
+              <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+              <span className="relative font-bold text-lg">
+                Check the dataset!
+              </span>
+            </span>
+            <span
+              className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+              data-rounded="rounded-lg"
+            ></span>
+          </a>
+        </div>
+      </div>,
+
+      <ImageCarousel
+        key="3"
+        datatruth={true}
+        list={[
+          "bg-japanbirth2",
+          "bg-japanbirth1",
+          "bg-japanbirth3",
+          "bg-japanbirth4",
+          "bg-japanbirth5",
+        ]}
       />,
     ],
   };
   const url = window.location.href;
   const id = url.substring(url.lastIndexOf("/") + 1);
-  // console.log(id);
+
   return (
-    <div className="text-white grid grid-cols-3 px-10">
+    <div className="text-white  grid grid-cols-3 px-10">
       <div className="col-span-2 mt-10">
         <h1 className="text-5xl  ">{projects[id][0]}</h1>
         <p className="text-lg  font-mono leading-4 mt-5"> {projects[id][1]}</p>
         <div className="mt-20 pr-20">{projects[id][3]}</div>
       </div>
       <div className="mt-10 ">
-        <div className="sticky top-20 ">
+        <div className="sticky top-24 ">
           {projects[id][4]}
           <div>{projects[id][5]}</div>
         </div>

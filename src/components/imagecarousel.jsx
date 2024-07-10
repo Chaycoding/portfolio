@@ -1,36 +1,76 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import video from "../assets/fluttertaskapp.webm";
+import { FaChevronCircleLeft } from "react-icons/fa";
+import { FaChevronCircleRight } from "react-icons/fa";
 
-function ImageCarousel({ list }) {
-  //   let class1 = `${list[0]} rounded-2xl bg-cover h-[30rem] w-full`;
-  //   let class2 = `${list[1]} rounded-2xl bg-cover h-[30rem] w-full`;
-  //   let class3 = `${list[2]} rounded-2xl bg-cover h-[30rem] w-full`;
+function ImageCarousel({ list, datatruth }) {
+  // const url = window.location.href;
+  // const id = url.substring(url.lastIndexOf("/") + 1);
+
   return (
     <div>
-      <Carousel className="w-5/6">
-        {/* <div>
-          <div className="bg-fluttertask1 rounded-2xl bg-cover h-[30rem] w-full"></div>
-        </div>
-
-        <div>
-          <div className="bg-fluttertask1 bg-cover rounded-2xl h-[30rem] w-full"></div>
-        </div>
-        
-        <div>
-          <div className="bg-fluttertask1 bg-cover h-[30rem] rounded-2xl w-full"></div>
-        </div> */}
-
-        {list.map((e, i) => {
-          return (
-            <div key={i}>
+      {datatruth ? (
+        <Carousel
+          className="w-full "
+          infiniteLoop={true}
+          showThumbs={false}
+          renderArrowPrev={(clickHandler, hasPrev) => {
+            return (
               <div
-                className={`bg-${e} bg-cover h-[30rem]  rounded-2xl w-full`}
-              ></div>
-            </div>
-          );
-        })}
-      </Carousel>
+                className={`${
+                  hasPrev ? "absolute" : "hidden"
+                } top-0 bottom-0 left-0 flex justify-center items-center p-1 opacity-40 hover:opacity-100 cursor-pointer z-20`}
+                onClick={clickHandler}
+              >
+                <FaChevronCircleLeft className="w-6 h-6 text-black" />
+              </div>
+            );
+          }}
+          renderArrowNext={(clickHandler, hasNext) => {
+            return (
+              <div
+                className={`${
+                  hasNext ? "absolute" : "hidden"
+                } top-0 bottom-0 right-0 flex justify-center items-center p-1 opacity-40 hover:opacity-100 cursor-pointer z-20`}
+                onClick={clickHandler}
+              >
+                <FaChevronCircleRight className="w-6 h-6 text-black" />
+              </div>
+            );
+          }}
+        >
+          {list.map((e, i) => {
+            return (
+              <div key={i}>
+                <div
+                  className={`${e} bg-cover  h-[15rem] bg-center  rounded-2xl w-full`}
+                ></div>
+              </div>
+            );
+          })}
+        </Carousel>
+      ) : (
+        <Carousel className="w-5/6 " infiniteLoop={true}>
+          {list.map((e, i) => {
+            return (
+              <div key={i}>
+                <div
+                  className={`bg-${e} bg-cover h-[30rem]  rounded-2xl w-full`}
+                ></div>
+              </div>
+            );
+          })}
+
+          <div className="flex justify-center  items-center">
+            <video width="220" height="180" className="rounded-2xl " controls>
+              <source src={video} type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </Carousel>
+      )}
     </div>
   );
 }
