@@ -27,6 +27,7 @@ export default {
         japanbirth3: `url(/src/components/images/highquality/datascience/japanbirth3.png)`,
         japanbirth4: `url(/src/components/images/highquality/datascience/japanbirth4.png)`,
         japanbirth5: `url(/src/components/images/highquality/datascience/japanbirth5.png)`,
+        auhappy: `url(/src/components/images/highquality/datascience/auhappy.jpg)`,
         coolcog: `url(/src/components/images/highquality/coolcog.svg)`,
         coolcogb: `url(/src/components/images/highquality/coolcogb.svg)`,
       },

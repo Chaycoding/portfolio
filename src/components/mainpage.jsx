@@ -141,7 +141,7 @@ function Mainpage({ isFirstMount }) {
                     <Card text={"Flutter"} speed="3.4" />
                     <Card text={"HTML5"} speed="3.6" />
                     <Card text={"GIT"} speed="3.6" />
-                    <Card text={"Dart"} speed="3.8" />
+                    <Card text={"C++"} speed="3.8" />
                   </div>
                 </div>
               </div>
