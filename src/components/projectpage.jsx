@@ -322,6 +322,23 @@ function ProjectPage() {
         list={["flutternotes2", "flutternotes3", "flutternotes1"]}
       />,
     ],
+    12: [
+      "Drawing app",
+      "Skills used - Flutter",
+      "",
+      <p key="2" className="text-lg">
+        I like drawing. I've had a knack for it since I was small. This app is a
+        rather simple app. I wanted to make the app a lot more smoother and add
+        brushes, however I lack suffient knowledge to optimize the app enough
+        for the brushes to work without lagging the entire app.
+      </p>,
+
+      <ImageCarousel
+        key="3"
+        id={9}
+        list={["flutterdraw2", "flutterdraw3", "flutterdraw1"]}
+      />,
+    ],
     10: [
       "Data analysis on the birth rate in Japan",
       "Skills used - Python, Pandas, Matplotlib",
