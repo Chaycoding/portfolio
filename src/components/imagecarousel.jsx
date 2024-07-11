@@ -2,12 +2,19 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import video from "../assets/fluttertaskapp.webm";
+import video1 from "../assets/flutternotes.webm";
+// import video2 from "../assets/flutterdraw.webm";
 import { FaChevronCircleLeft } from "react-icons/fa";
 import { FaChevronCircleRight } from "react-icons/fa";
 
-function ImageCarousel({ list, datatruth }) {
+function ImageCarousel({ list, datatruth, id }) {
   // const url = window.location.href;
   // const id = url.substring(url.lastIndexOf("/") + 1);
+
+  let imagecheck = {
+    4: video,
+    9: video1,
+  };
 
   return (
     <div>
@@ -63,12 +70,14 @@ function ImageCarousel({ list, datatruth }) {
             );
           })}
 
-          <div className="flex justify-center  items-center">
-            <video width="220" height="180" className="rounded-2xl " controls>
-              <source src={video} type="video/webm" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+          {id ? (
+            <div className="flex justify-center  items-center">
+              <video width="220" height="180" className="rounded-2xl " controls>
+                <source src={imagecheck[id]} type="video/webm" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          ) : null}
         </Carousel>
       )}
     </div>

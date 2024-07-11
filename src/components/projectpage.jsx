@@ -172,6 +172,7 @@ function ProjectPage() {
       </p>,
       <ImageCarousel
         key="3"
+        id={4}
         list={["fluttertask1", "fluttertask2", "fluttertask3"]}
       />,
     ],
@@ -317,7 +318,7 @@ function ProjectPage() {
 
       <ImageCarousel
         key="3"
-        // id={id}
+        id={9}
         list={["flutternotes2", "flutternotes3", "flutternotes1"]}
       />,
     ],

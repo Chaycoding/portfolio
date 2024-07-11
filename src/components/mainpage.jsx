@@ -98,7 +98,7 @@ function Mainpage({ isFirstMount }) {
               <div className="col-span-2 px-10">
                 <div className="grid grid-cols-3  w-full">
                   <div className="grid grid-cols-1  w-full">
-                    <div className="flex items-center justify-center h-40 gap-3 ">
+                    <div className="grid grid-cols-2 items-center justify-start h-40 gap-3 ">
                       <Card text={"Python"} speed="2" />
                       <div className="grid grid-cols-1 gap-y-2">
                         {items1.map((item, i) => (
@@ -106,7 +106,7 @@ function Mainpage({ isFirstMount }) {
                         ))}
                       </div>
                     </div>
-                    <div className="flex items-center justify-center h-40 gap-3">
+                    <div className="grid grid-cols-2 items-center justify-start h-40 gap-3">
                       <Card text={"Javascript"} speed="2" />
                       <div className="grid grid-cols-1 gap-y-2">
                         {items12.map((item, i) => (
@@ -117,7 +117,7 @@ function Mainpage({ isFirstMount }) {
                   </div>
 
                   <div className="grid grid-cols-1 w-full">
-                    <div className="flex items-center justify-center h-40 gap-3">
+                    <div className="grid grid-cols-2 items-center justify-start h-40 gap-3">
                       <Card text={"Databases"} speed="2" />
                       <div className="grid grid-cols-1 gap-y-2">
                         {items2.map((item, i) => (
@@ -125,7 +125,7 @@ function Mainpage({ isFirstMount }) {
                         ))}
                       </div>
                     </div>
-                    <div className="flex items-center justify-center h-40 gap-3">
+                    <div className="grid grid-cols-2 items-center justify-start h-40 gap-3">
                       <Card text={"CSS"} speed="2" />
                       <div className="grid grid-cols-1 gap-y-2">
                         {items22.map((item, i) => (
