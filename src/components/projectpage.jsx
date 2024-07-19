@@ -461,6 +461,31 @@ function ProjectPage() {
 
       <ImageCarousel key="3" datatruth={true} list={["bg-auhappy"]} />,
     ],
+    12: [
+      "Stock market charts",
+      "Skills used - Django, React, Python, Matplotlib, Pandas, mpl_finance, REST API",
+      "",
+      <div key="2" className="text-lg">
+        This site has a react frontend and a Django backend. The Django backend
+        essentially acts as an API supplying the data requested by the frontend.
+        Essentially you can give the ticker of the company you'd like to see
+        stock data on and the backend will make beautiful charts and produce it
+        to the frontend.
+        <br />
+        <br />
+        This is done using the data of the stock data scraped off of yahoo
+        finance which is then made into charts using matplotlib and mpl finance.
+        <br />
+      </div>,
+
+      <ImageCarousel
+        key="3"
+        datatruth={true}
+        list={[
+          "bg-djangostock3, bg-djangostock4, bg-djangostock2,bg-djangostock1",
+        ]}
+      />,
+    ],
   };
   const url = window.location.href;
   const id = url.substring(url.lastIndexOf("/") + 1);
