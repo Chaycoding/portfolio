@@ -461,7 +461,7 @@ function ProjectPage() {
 
       <ImageCarousel key="3" datatruth={true} list={["bg-auhappy"]} />,
     ],
-    12: [
+    13: [
       "Stock market charts",
       "Skills used - Django, React, Python, Matplotlib, Pandas, mpl_finance, REST API",
       "",
@@ -482,7 +482,10 @@ function ProjectPage() {
         key="3"
         datatruth={true}
         list={[
-          "bg-djangostock3, bg-djangostock4, bg-djangostock2,bg-djangostock1",
+          "bg-djangostock3",
+          "bg-djangostock4",
+          "bg-djangostock2",
+          "bg-djangostock1",
         ]}
       />,
     ],
