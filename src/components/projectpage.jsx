@@ -489,6 +489,26 @@ function ProjectPage() {
         ]}
       />,
     ],
+    14: [
+      "C++ minesweeper",
+      "Skills used - C++, wxwidgets",
+      "",
+      <div key="2" className="text-lg">
+        There's not a whole lot to say with regards to this one. I made it to
+        familiarise myself with c++ and thus for this purpose I figured using
+        wxwidgets, despite it's difficulty for a starter, would be good as this
+        helped me solidify my understanding when it comes to object oriented
+        programming.
+        <br />
+        <br />
+      </div>,
+
+      <ImageCarousel
+        key="3"
+        datatruth={true}
+        list={["bg-cmine1", "bg-cmine2", "bg-cmine3"]}
+      />,
+    ],
   };
   const url = window.location.href;
   const id = url.substring(url.lastIndexOf("/") + 1);
