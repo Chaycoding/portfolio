@@ -143,7 +143,7 @@ function Newestposts() {
         <div className=" bg-fluttertask2 bg-right-top z-10  w-28  bg-cover "></div>
         <div className=" bg-fluttertask3 bg-right-top z-10   w-28 bg-cover "></div>
       </div>
-      <h1 className="text-xl text-center">Task ManagerAapp</h1>
+      <h1 className="text-xl text-center">Task Manager App</h1>
       <p className="text-base  font-mono text-center leading-4">
         Skills used - Flutter
       </p>
@@ -257,7 +257,7 @@ function Newestposts() {
     </div>,
     <div key="10" className="grid grid-cols-1 relative h-full px-1">
       <div className="w-full bg-djangostock3 bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
-      <h1 className="text-xl text-center">Stock charts</h1>
+      <h1 className="text-xl text-center">Stock Charts</h1>
       <p className="text-base text-center font-mono leading-4">
         Skills used - Django, React, Python, Matplotlib, Pandas, mpl_finance,
         REST API
@@ -310,9 +310,32 @@ function Newestposts() {
         Data analysis
       </div>
     </div>,
+    <div key="12" className="grid grid-cols-1 relative h-full px-1">
+      <div className="w-full bg-CTodo1 bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
+      <h1 className="text-xl text-center">C++ To-Do List</h1>
+      <p className="text-base text-center font-mono leading-4">
+        Skills used - C++, wxwidgets
+      </p>
+      <div className="flex justify-center h-8  ">
+        <Link
+          to="/projectpage/15"
+          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
+        >
+          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
+            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+            <span className="relative font-bold">More details</span>
+          </span>
+          <span
+            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+            data-rounded="rounded-lg"
+          ></span>
+        </Link>
+      </div>
+    </div>,
     <div key="11" className="grid grid-cols-1 relative h-full px-1">
       <div className="w-full bg-cmine1 bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
-      <h1 className="text-xl text-center">C++ minesweeper</h1>
+      <h1 className="text-xl text-center">C++ Minesweeper</h1>
       <p className="text-base text-center font-mono leading-4">
         Skills used - C++, wxwidgets
       </p>

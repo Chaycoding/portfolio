@@ -8,7 +8,7 @@ function Header() {
 
   return (
     <div className={scrollHeader}>
-      <div className="w-full h-20 hidden items-center sm:flex ">
+      <div className="w-full h-16 hidden items-center sm:flex ">
         <div className="font-[Open Sans] text-white basis-4/6">
           <div className="w-max">
             <Link to="/">

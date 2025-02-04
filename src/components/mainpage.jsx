@@ -4,15 +4,15 @@ import PageSwitchAni from "./transitionAnimation/pageAni";
 import Newestposts from "./newestPosts";
 import Card from "./card2";
 import Card3 from "./card3";
-import { tsParticles } from "https://cdn.jsdelivr.net/npm/@tsparticles/engine@3.0.3/+esm";
+import { tsParticles } from "@tsparticles/engine";
 
-import { loadAll } from "https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.3/+esm";
+import { loadFull } from "tsparticles";
 import { useEffect } from "react";
 
 function Mainpage({ isFirstMount }) {
   useEffect(() => {
     (async () => {
-      await loadAll(tsParticles);
+      await loadFull(tsParticles);
 
       await tsParticles.addPreset("lightdark", {
         fullScreen: {
@@ -69,6 +69,7 @@ function Mainpage({ isFirstMount }) {
       });
     })();
   }, []);
+
   const items1 = ["Pandas", "Numpy", "Seaborn", "Matplotlib"];
   const items12 = ["ExpressJs", "NodeJs", "MongooseJs"];
 
@@ -78,7 +79,7 @@ function Mainpage({ isFirstMount }) {
   // const items3 = ["Mongodb", "Django"];
 
   return (
-    <div className=" -mt-[5rem]  w-full">
+    <div className=" -mt-[2rem]  w-full">
       {isFirstMount ? <EntranceAni /> : <PageSwitchAni />}
 
       <div>
