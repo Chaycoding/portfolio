@@ -11,5 +11,6 @@ export default defineConfig({
       include: ["./src/**/*.jsx", "./src/**/*.js"],
     }),
   ],
-  server: { port: 3000 },
+  // server: { port: 3000 },
+  base: "/portfolio/",
 });
