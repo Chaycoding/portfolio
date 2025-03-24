@@ -30,6 +30,8 @@ export default {
         djangostock2: `url(/src/components/images/highquality/stock2.jpg)`,
         djangostock3: `url(/src/components/images/highquality/stock3.jpg)`,
         djangostock4: `url(/src/components/images/highquality/stock4.jpg)`,
+        CTodo1: `url(/src/components/images/highquality/CTodo1.jpg)`,
+        CTodo2: `url(/src/components/images/highquality/CTodo2.jpg)`,
         cmine1: `url(/src/components/images/highquality/cmine1.png)`,
         cmine2: `url(/src/components/images/highquality/cmine2.png)`,
         cmine3: `url(/src/components/images/highquality/cmine3.png)`,

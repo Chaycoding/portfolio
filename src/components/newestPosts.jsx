@@ -168,7 +168,10 @@ function Newestposts() {
       </div>
     </div>,
     <div key="6" className="grid grid-cols-1 relative h-full px-1">
-      <div className="w-full grid grid-cols-3 rounded-xl h-40 overflow-hidden">
+      <div
+        className="w-full grid grid-cols-3 
+      rounded-xl h-40 overflow-hidden"
+      >
         <div className=" bg-flutternotes1  z-10  w-28 bg-right-top  bg-cover "></div>
         <div className=" bg-flutternotes2 z-10 bg-center w-28  bg-cover "></div>
         <div className=" bg-flutternotes3 bg-right-top z-10   w-28 bg-cover "></div>
@@ -308,6 +311,29 @@ function Newestposts() {
       </div>
       <div className="absolute z-10 right-0 bg-violet-700 rounded-lg text-base w-28 text-center  px-2">
         Data analysis
+      </div>
+    </div>,
+    <div key="12" className="grid grid-cols-1 relative h-full px-1">
+      <div className="w-full bg-CTodo1 bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
+      <h1 className="text-xl text-center">C++ To-Do List</h1>
+      <p className="text-base text-center font-mono leading-4">
+        Skills used - C++, wxwidgets
+      </p>
+      <div className="flex justify-center h-8  ">
+        <Link
+          to="/projectpage/15"
+          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
+        >
+          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
+            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+            <span className="relative font-bold">More details</span>
+          </span>
+          <span
+            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+            data-rounded="rounded-lg"
+          ></span>
+        </Link>
       </div>
     </div>,
     <div key="11" className="grid grid-cols-1 relative h-full px-1">
@@ -493,19 +519,23 @@ function Newestposts() {
   ];
 
   return (
-    <div className="mt-10 grid grid-cols-1 mx-28 ">
+    <div className="sm:mt-10 mt-60 grid grid-cols-1 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="h-24 w-24"></div>
       <div>
-        Intermediate projects
-        <div className="grid grid-cols-3 gap-y-14 gap-x-10">
+        <h2 className="text-2xl font-bold mb-8 text-center ">
+          Intermediate projects
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-8">
           {intermediateList.map((item, i) => (
             <Card key={i} text={item} index={i} />
           ))}
         </div>
       </div>
-      <div className=" mt-40">
-        Beginner projects
-        <div className="grid grid-cols-3 gap-y-14 gap-x-10 ">
+      <div className=" mt-20">
+        <h2 className="text-2xl font-bold mb-8 text-center ">
+          Beginner projects
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-8">
           {beginnerProjects.map((item, i) => (
             <Card key={i} text={item} index={i} />
           ))}
