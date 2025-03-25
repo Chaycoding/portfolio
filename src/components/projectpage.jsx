@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import ImageCarousel from "./imagecarousel";
+
 function ProjectPage() {
   const projects = {
     1: [
@@ -19,8 +20,7 @@ function ProjectPage() {
         I thought it would be better to spend my time adding other features. The
         blog would have paragraphs separated and arranged appropriately. I added
         in a small game as render takes a while to spin up. Of course in real
-        world applications this would not exist.
-        <br />
+        world applications this would not exist. <br />
         <br />
         Backend - The backend recieves whatever blog the user has typed along
         with images and other details such as the user info and date-time of
@@ -418,7 +418,7 @@ function ProjectPage() {
         has been helpful for those looking into countries for work and others.
         <br />
         <br />
-        <br />A kaggle notebook is available to view the code -
+        <br />A kaggle notebook is availableto view the code -
         <div className="flex justify-between mt-10">
           <a
             href="https://lnkd.in/gkszeE3z"
@@ -535,18 +535,29 @@ function ProjectPage() {
   const id = url.substring(url.lastIndexOf("/") + 1);
 
   return (
-    <div className="text-white  grid grid-cols-3 px-10">
-      <div className="col-span-2 mt-10">
-        <h1 className="text-5xl  ">{projects[id][0]}</h1>
-        <p className="text-lg  font-mono leading-4 mt-5"> {projects[id][1]}</p>
-        <div className="mt-20 pr-20">{projects[id][3]}</div>
-      </div>
-      <div className="mt-10 ">
-        <div className="sticky top-24 ">
-          {projects[id][4]}
-          <div>{projects[id][5]}</div>
+    <div className="text-white px-4 sm:px-6 lg:px-8 py-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Main Content Area */}
+        <div className="col-span-2">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4 sm:mb-6">
+            {projects[id][0]}
+          </h1>
+          <p className="text-base sm:text-lg font-mono leading-relaxed mt-2 sm:mt-3">
+            {projects[id][1]}
+          </p>
+          <div className="mt-8 sm:mt-10 pr-0 sm:pr-10 lg:pr-20">
+            {projects[id][3]}
+          </div>
         </div>
-        <p className="mt-10 text-sm font-mono">{projects[id][2]}</p>
+
+        {/* Sidebar Area */}
+        <div className="mt-0">
+          <div className="sticky top-4">
+            {projects[id][4]}
+            <div className="mt-4 sm:mt-6">{projects[id][5]}</div>
+          </div>
+          <p className="mt-6 sm:mt-8 text-sm font-mono">{projects[id][2]}</p>
+        </div>
       </div>
     </div>
   );
