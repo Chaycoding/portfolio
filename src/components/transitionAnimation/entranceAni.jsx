@@ -1,112 +1,116 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 function EntranceAni() {
   const [displayitem, setdisplayitem] = useState("");
-  const blackBox = {
-    initial: {
-      height: "100vh",
-      bottom: 0,
-    },
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setdisplayitem("hidden");
+    }, 3500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const topDoor = {
+    initial: { y: 0 },
     animate: {
-      height: 0,
-      transition: {
-        when: "afterChildren",
-        duration: 1.5,
-        ease: [0.87, 0, 0.13, 1],
-      },
+      y: "-100vh",
+      transition: { delay: 2.2, duration: 1, ease: [0.76, 0, 0.24, 1] },
     },
   };
-  const textContainer = {
-    initial: {
-      opacity: 1,
+
+  const bottomDoor = {
+    initial: { y: 0 },
+    animate: {
+      y: "100vh",
+      transition: { delay: 2.2, duration: 1, ease: [0.76, 0, 0.24, 1] },
     },
+  };
+
+  const drawLine = {
+    hidden: { pathLength: 0, opacity: 0 },
+    visible: {
+      pathLength: 1,
+      opacity: 1,
+      transition: { duration: 1.5, ease: "easeInOut" },
+    },
+  };
+
+  // Fade the SVG out before the massive scale to prevent GPU lag
+  const svgFade = {
+    initial: { opacity: 1 },
     animate: {
       opacity: 0,
-      transition: {
-        duration: 0.25,
-        when: "afterChildren",
-      },
+      transition: { delay: 1.8, duration: 0.2 },
     },
   };
-  const text = {
-    initial: {
-      y: 0,
-    },
+
+  // Scale only the simple div (hardware accelerated)
+  const coreFlash = {
+    initial: { scale: 0, opacity: 0 },
     animate: {
-      y: 80,
-      transition: {
-        duration: 1.5,
-        ease: [0.87, 0, 0.13, 1],
+      scale: [0, 1, 0.8, 40],
+      opacity: [0, 1, 1, 0],
+      transition: { 
+        delay: 1, 
+        duration: 1.2, 
+        times: [0, 0.6, 0.8, 1], 
+        ease: "circIn" 
       },
     },
   };
-
-  setTimeout(() => {
-    setdisplayitem("hidden");
-  }, 3000);
-
-  let displaything = `absolute h-screen w-screen  inset-0 flex items-end ${displayitem}`;
 
   return (
-    <div className={displaything}>
+    <div
+      className={`fixed inset-0 z-[100] flex flex-col pointer-events-none ${displayitem}`}
+    >
       <motion.div
-        className="absolute z-40  grid grid-col-1 bg-cover bg-pageanimation w-full bg-[#2F2F31]"
+        className="h-1/2 w-full bg-[#030712] border-b border-slate-800 flex items-end justify-center"
+        variants={topDoor}
         initial="initial"
         animate="animate"
-        variants={blackBox}
-        onAnimationStart={() => document.body.classList.add("overflow-hidden")}
-        onAnimationComplete={() =>
-          document.body.classList.remove("overflow-hidden")
-        }
-      >
-        <motion.div className=" w-full grid grid-cols-3 ">
-          <motion.div className=" overflow-hidden">
-            <div className="h-[27rem] w-[27rem] flex items-center justify-center bg-coolcogb bg-cover bg-center cogrotaterevb -ml-[50%] -mt-[50%] outline-black fade-in-image  ">
-              <div className="h-60 w-60 bg-coolcog bg-cover p-20 bg-center cogrotate  outline-black fade-in-image  "></div>
-            </div>
-          </motion.div>
-          <motion.div className=" overflow-hidden"></motion.div>
-          <motion.div className=" overflow-hidden flex justify-end">
-            <div className="h-[27rem] w-[27rem] flex items-center justify-center bg-coolcogb bg-cover bg-center cogrotateb -mr-[50%] -mt-[50%] outline-black fade-in-image  ">
-              <div className="h-52 w-52 bg-coolcog bg-cover bg-center cogrotaterev  outline-black fade-in-image  "></div>
-            </div>
-          </motion.div>
-        </motion.div>
+        style={{ willChange: "transform" }}
+      />
 
-        <motion.svg
-          variants={textContainer}
-          className=" flex items-center justify-center w-full z-40  -mt-5"
-        >
-          <pattern
-            id="pattern"
-            patternUnits="userSpaceOnUse"
-            width={750}
-            height={800}
-            className="text-black"
+      <motion.div
+        className="h-1/2 w-full bg-[#030712] border-t border-slate-800 flex items-start justify-center"
+        variants={bottomDoor}
+        initial="initial"
+        animate="animate"
+        style={{ willChange: "transform" }}
+      />
+
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="relative flex items-center justify-center">
+          <motion.svg
+            width="140"
+            height="140"
+            viewBox="0 0 100 100"
+            className="drop-shadow-[0_0_15px_rgba(14,165,233,0.5)]"
+            variants={svgFade}
+            initial="initial"
+            animate="animate"
           >
-            <rect className="w-full h-full fill-current" />
-            <motion.rect
-              variants={text}
-              className="w-full h-full text-white fill-current"
+            <motion.polygon
+              points="50 5, 90 25, 90 75, 50 95, 10 75, 10 25"
+              fill="none"
+              stroke="#0ea5e9"
+              strokeWidth="1.5"
+              variants={drawLine}
+              initial="hidden"
+              animate="visible"
             />
-          </pattern>
-          <text
-            className="text-8xl font-bold text-center "
-            textAnchor="middle"
-            x="50%"
-            y="50%"
-            style={{ fill: "url(#pattern)" }}
-          >
-            Portfolio
-          </text>
-        </motion.svg>
-        <motion.div className="w-full grid grid-cols-3">
-          <motion.div></motion.div>
-
-          <motion.div className=" overflow-hidden flex items-end justify-center"></motion.div>
-          <motion.div></motion.div>
-        </motion.div>
-      </motion.div>
+          </motion.svg>
+          
+          <motion.div
+            variants={coreFlash}
+            initial="initial"
+            animate="animate"
+            style={{ willChange: "transform, opacity" }}
+            className="absolute w-8 h-8 bg-[#0ea5e9] rounded-full shadow-[0_0_20px_#0ea5e9]"
+          />
+        </div>
+      </div>
     </div>
   );
 }

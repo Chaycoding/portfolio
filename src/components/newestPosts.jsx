@@ -1,546 +1,279 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Card from "./card";
-function Newestposts() {
-  const intermediateList = [
-    <div key="1" className="grid grid-cols-1 relative h-full px-1">
-      <div className="w-full bg-blogsite bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
-      <h1 className="text-xl text-center">
-        Blogsite <span className="font-bold">- Fullstack</span>
-      </h1>
-      <p className="text-base  font-mono leading-4">
-        Skills used - React, Mongodb, Mongoose, Express.js, Node.js, Javascript,
-        Firebase, Tailwind, CSS
-      </p>
-      <div className="flex justify-between h-8  ">
-        <Link
-          to="/projectpage/1"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">More details</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </Link>
-        <a
-          href="https://chaycoding.github.io/Project_4-Blog_frontend/"
-          target="_blank"
-          rel="noreferrer"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">See project</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </a>
-      </div>
-      <div className="absolute z-10 right-0 bg-blue-500 rounded-lg text-base w-28 text-center  px-2">
-        Web
-      </div>
-    </div>,
-    <div key="2" className="grid grid-cols-1 relative h-full px-1">
-      <div className="w-full bg-compassion bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
-      <h1 className="text-xl text-center">
-        Compassion Project <span className="font-bold">- Fullstack</span>
-      </h1>
-      <p className="text-base  font-mono leading-4">
-        Skills used - React, Mongodb, Express.js, Node.js, CSS, Bootstrap
-      </p>
-      <div className="flex justify-between h-8  ">
-        <Link
-          to="/projectpage/2"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">More details</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </Link>
-        <a
-          href="https://chaycoding.github.io/Project_3-compassion/"
-          target="_blank"
-          rel="noreferrer"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">See project</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </a>
-      </div>
-      <div className="absolute z-10 right-0 bg-blue-500 rounded-lg text-base w-28 text-center  px-2">
-        Web
-      </div>
-    </div>,
-    <div key="3" className="grid grid-cols-1 relative h-full px-1">
-      <div className="w-full bg-weather bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
-      <h1 className="text-xl text-center">Weather App</h1>
-      <p className="text-base  font-mono leading-4">
-        Skills used - React, Javascript, Tailwind, CSS, APIs
-      </p>
-      <div className="flex justify-between h-8  ">
-        <Link
-          to="/projectpage/3"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">More details</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </Link>
-        <a
-          href="https://chaycoding.github.io/weather-app/"
-          target="_blank"
-          rel="noreferrer"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">See project</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </a>
-      </div>
-      <div className="absolute z-10 right-0 bg-blue-500 rounded-lg text-base w-28 text-center  px-2">
-        Web
-      </div>
-    </div>,
-  ];
 
-  const beginnerProjects = [
-    <div key="1" className="grid grid-cols-1 relative h-full px-1">
-      <div className="w-full grid grid-cols-3 rounded-xl h-40 overflow-hidden">
-        <div className=" bg-fluttertask1  z-10  w-28 bg-right-top  bg-cover "></div>
-        <div className=" bg-fluttertask2 bg-right-top z-10  w-28  bg-cover "></div>
-        <div className=" bg-fluttertask3 bg-right-top z-10   w-28 bg-cover "></div>
-      </div>
-      <h1 className="text-xl text-center">Task ManagerAapp</h1>
-      <p className="text-base  font-mono text-center leading-4">
-        Skills used - Flutter
-      </p>
-      <div className="flex justify-center h-8  ">
-        <Link
-          to="/projectpage/4"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">More details</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </Link>
-      </div>
-      <div className="absolute z-10 right-0 bg-green-500 rounded-lg text-base w-28 text-center  px-2">
-        Flutter app
-      </div>
-    </div>,
-    <div key="6" className="grid grid-cols-1 relative h-full px-1">
-      <div
-        className="w-full grid grid-cols-3 
-      rounded-xl h-40 overflow-hidden"
-      >
-        <div className=" bg-flutternotes1  z-10  w-28 bg-right-top  bg-cover "></div>
-        <div className=" bg-flutternotes2 z-10 bg-center w-28  bg-cover "></div>
-        <div className=" bg-flutternotes3 bg-right-top z-10   w-28 bg-cover "></div>
-      </div>
-      <h1 className="text-xl text-center">Notes App</h1>
-      <p className="text-base text-center font-mono leading-4">
-        Skills used - Flutter
-      </p>
-      <div className="flex justify-center h-8  ">
-        <Link
-          to="/projectpage/9"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">More details</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </Link>
-      </div>
-      <div className="absolute z-10 right-0 bg-green-500 rounded-lg text-base w-28 text-center  px-2">
-        Flutter app
-      </div>
-    </div>,
-    <div key="9" className="grid grid-cols-1 relative h-full px-1">
-      <div className="w-full grid grid-cols-3 rounded-xl h-40 overflow-hidden">
-        <div className=" bg-flutterdraw1  z-10  w-28 bg-right-top  bg-cover "></div>
-        <div className=" bg-flutterdraw2 z-10 bg-center w-28  bg-cover "></div>
-        <div className=" bg-flutterdraw3 bg-right-top z-10   w-28 bg-cover "></div>
-      </div>
-      <h1 className="text-xl text-center">Drawing App</h1>
-      <p className="text-base text-center font-mono leading-4">
-        Skills used - Flutter
-      </p>
-      <div className="flex justify-center h-8  ">
-        <Link
-          to="/projectpage/12"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">More details</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </Link>
-      </div>
-      <div className="absolute z-10 right-0 bg-green-500 rounded-lg text-base w-28 text-center  px-2">
-        Flutter app
-      </div>
-    </div>,
-    <div key="7" className="grid grid-cols-1 relative h-full px-1">
-      <div className="w-full bg-japanbirth2 bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
-      <h1 className="text-xl text-center">
-        Data analysis on the birth rate in Japan
-      </h1>
-      <p className="text-base text-center font-mono leading-4">
-        Skills used - Python, Pandas, Matplotlib
-      </p>
-      <div className="flex justify-center h-8  ">
-        <Link
-          to="/projectpage/10"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">More details</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </Link>
-      </div>
-      <div className="absolute z-10 right-0 bg-violet-700 rounded-lg text-base w-28 text-center  px-2">
-        Data analysis
-      </div>
-    </div>,
-    <div key="10" className="grid grid-cols-1 relative h-full px-1">
-      <div className="w-full bg-djangostock3 bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
-      <h1 className="text-xl text-center">Stock charts</h1>
-      <p className="text-base text-center font-mono leading-4">
-        Skills used - Django, React, Python, Matplotlib, Pandas, mpl_finance,
-        REST API
-      </p>
-      <div className="flex justify-center h-8  ">
-        <Link
-          to="/projectpage/13"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">More details</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </Link>
-      </div>
-      <div className="absolute z-10 right-0 bg-orange-600 rounded-lg text-base w-28 text-center  px-2">
-        Django
-      </div>
-    </div>,
-    <div key="8" className="grid grid-cols-1 relative h-full px-1">
-      <div className="w-full bg-auhappy bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
-      <h1 className="text-xl text-center">
-        Data analysis on the happiness index in Australia
-      </h1>
-      <p className="text-base text-center font-mono leading-4">
-        Skills used - Python, Pandas, Matplotlib
-      </p>
-      <div className="flex justify-center h-8  ">
-        <Link
-          to="/projectpage/11"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">More details</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </Link>
-      </div>
-      <div className="absolute z-10 right-0 bg-violet-700 rounded-lg text-base w-28 text-center  px-2">
-        Data analysis
-      </div>
-    </div>,
-    <div key="12" className="grid grid-cols-1 relative h-full px-1">
-      <div className="w-full bg-CTodo1 bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
-      <h1 className="text-xl text-center">C++ To-Do List</h1>
-      <p className="text-base text-center font-mono leading-4">
-        Skills used - C++, wxwidgets
-      </p>
-      <div className="flex justify-center h-8  ">
-        <Link
-          to="/projectpage/15"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">More details</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </Link>
-      </div>
-    </div>,
-    <div key="11" className="grid grid-cols-1 relative h-full px-1">
-      <div className="w-full bg-cmine1 bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
-      <h1 className="text-xl text-center">C++ minesweeper</h1>
-      <p className="text-base text-center font-mono leading-4">
-        Skills used - C++, wxwidgets
-      </p>
-      <div className="flex justify-center h-8  ">
-        <Link
-          to="/projectpage/14"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">More details</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </Link>
-      </div>
-    </div>,
-    <div key="2" className="grid grid-cols-1 h-full px-1">
-      <div className="w-full bg-rps bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
-      <h1 className="text-xl text-center">A Simple Rock Paper Scissor Game</h1>
-      <p className="text-base  font-mono leading-4">
-        Skills used - HTML, CSS, Javascript, React
-      </p>
-      <div className="flex justify-between h-8  ">
-        <Link
-          to="/projectpage/5"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">More details</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </Link>
-        <Link
-          to="/rps"
-          target="_blank"
-          rel="noreferrer"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">See project</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </Link>
-      </div>
-    </div>,
+// 1. Centralized Data Structure
 
-    <div key="3" className="grid grid-cols-1 h-full px-1">
-      <div className="w-full bg-imageparticle bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
-      <h1 className="text-xl text-center">Javascript Image Particles</h1>
-      <p className="text-base  font-mono leading-4">
-        Skills used - HTML, CSS, Javascript
-      </p>
-      <div className="flex justify-between h-8  ">
-        <Link
-          to="/projectpage/6"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">More details</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </Link>
-        <a
-          href="https://chaycoding.github.io/rukiaimageparticle/"
-          target="_blank"
-          rel="noreferrer"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">See project</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </a>
-      </div>
-    </div>,
-    <div key="4" className="grid grid-cols-1 h-full px-1">
-      <div className="w-full bg-gamoflife bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
-      <h1 className="text-xl text-center">Game Of Life - Conway</h1>
-      <p className="text-base  font-mono leading-4">
-        Skills used - HTML, CSS, Javascript
-      </p>
-      <div className="flex justify-between h-8  ">
-        <Link
-          to="/projectpage/7"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">More details</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </Link>
-        <a
-          href="https://chaycoding.github.io/game-of-life/"
-          target="_blank"
-          rel="noreferrer"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">See project</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </a>
-      </div>
-    </div>,
-    <div key="5" className="grid grid-cols-1 h-full px-1">
-      <div className="w-full bg-calculator bg-center z-10 transition-all rounded-xl h-40 bg-cover "></div>
-      <h1 className="text-xl text-center">Calculator</h1>
-      <p className="text-base  font-mono leading-4">
-        Skills used - HTML, CSS, Javascript, React
-      </p>
-      <div className="flex justify-between h-8  ">
-        <Link
-          to="/projectpage/8"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">More details</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </Link>
-        <a
-          href="https://chaycoding.github.io/react-calculator/"
-          target="_blank"
-          rel="noreferrer"
-          className="relative inline-block  group hover:cursor-pointer bottom-1 text-sm   transition-all duration-[200ms]"
-        >
-          <span className="relative z-10 block px-3 py-1 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-3 py-1 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative font-bold">See project</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-8 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </a>
-      </div>
-    </div>,
-  ];
+const aiProjects = [
+  {
+    id: 17,
+    title: "Toxicity Prediction Engine",
+    subtitle: "Machine Learning / Cheminformatics",
+    skills: "Python, DeepChem, RDKit, Matplotlib, Pandas, Scikit-Learn",
+    imageClass: "bg-aitox", 
+    detailsLink: "/projectpage/17",
+    demoLink: "", 
+    tag: "AI & Science",
+  },
+  {
+    id: 16,
+    title: "Japanese tutor",
+    subtitle: "Fullstack",
+    skills: "NEXT.JS, Gemini API, TailwindCSS, Javascript",
+    imageClass: "bg-japai",
+    detailsLink: "/projectpage/16",
+    demoLink: "https://nihongo-ai-six.vercel.app/",
+    tag: "Web + AI",
+  },
+];
+
+const intermediateProjects = [
+  {
+    id: 1,
+    title: "Blogsite",
+    subtitle: "Fullstack",
+    skills: "React, MongoDB, Mongoose, Express.js, Node.js, JavaScript, Firebase, Tailwind, CSS",
+    imageClass: "bg-blogsite",
+    detailsLink: "/projectpage/1",
+    demoLink: "https://chaycoding.github.io/Project_4-Blog_frontend/",
+    tag: "Web",
+  },
+  {
+    id: 2,
+    title: "Compassion Project",
+    subtitle: "Fullstack",
+    skills: "React, MongoDB, Express.js, Node.js, CSS, Bootstrap",
+    imageClass: "bg-compassion",
+    detailsLink: "/projectpage/2",
+    demoLink: "https://chaycoding.github.io/Project_3-compassion/",
+    tag: "Web",
+  },
+  {
+    id: 3,
+    title: "Weather App",
+    skills: "React, JavaScript, Tailwind, CSS, APIs",
+    imageClass: "bg-weather",
+    detailsLink: "/projectpage/3",
+    demoLink: "https://chaycoding.github.io/weather-app/",
+    tag: "Web",
+  },
+];
+
+const beginnerProjects = [
+  {
+    id: 4,
+    title: "Task Manager App",
+    skills: "Flutter",
+    imageClass: ["bg-fluttertask1", "bg-fluttertask2", "bg-fluttertask3"],
+    detailsLink: "/projectpage/4",
+    tag: "Flutter",
+  },
+  {
+    id: 5,
+    title: "Notes App",
+    skills: "Flutter",
+    imageClass: ["bg-flutternotes1", "bg-flutternotes2", "bg-flutternotes3"],
+    detailsLink: "/projectpage/9",
+    tag: "Flutter",
+  },
+  {
+    id: 6,
+    title: "Drawing App",
+    skills: "Flutter",
+    imageClass: ["bg-flutterdraw1", "bg-flutterdraw2", "bg-flutterdraw3"],
+    detailsLink: "/projectpage/12",
+    tag: "Flutter",
+  },
+  {
+    id: 7,
+    title: "Japan Birth Rate Analysis",
+    skills: "Python, Pandas, Matplotlib",
+    imageClass: "bg-japanbirth2",
+    detailsLink: "/projectpage/10",
+    tag: "Data Analysis",
+  },
+  {
+    id: 8,
+    title: "Stock Charts",
+    skills: "Django, React, Python, Matplotlib, Pandas, REST API",
+    imageClass: "bg-djangostock3",
+    detailsLink: "/projectpage/13",
+    tag: "Django",
+  },
+  {
+    id: 9,
+    title: "Aus Happiness Index Analysis",
+    skills: "Python, Pandas, Matplotlib",
+    imageClass: "bg-auhappy",
+    detailsLink: "/projectpage/11",
+    tag: "Data Analysis",
+  },
+  {
+    id: 10,
+    title: "C++ To-Do List",
+    skills: "C++, wxWidgets",
+    imageClass: "bg-CTodo1",
+    detailsLink: "/projectpage/15",
+    tag: "C++",
+  },
+  {
+    id: 11,
+    title: "C++ Minesweeper",
+    skills: "C++, wxWidgets",
+    imageClass: "bg-cmine1",
+    detailsLink: "/projectpage/14",
+    tag: "C++",
+  },
+  {
+    id: 12,
+    title: "Rock Paper Scissors",
+    skills: "HTML, CSS, JavaScript, React",
+    imageClass: "bg-rps",
+    detailsLink: "/projectpage/5",
+    demoLink: "/rps", 
+    tag: "Web",
+  },
+  {
+    id: 13,
+    title: "JS Image Particles",
+    skills: "HTML, CSS, JavaScript",
+    imageClass: "bg-imageparticle",
+    detailsLink: "/projectpage/6",
+    demoLink: "https://chaycoding.github.io/rukiaimageparticle/",
+    tag: "Web",
+  },
+  {
+    id: 14,
+    title: "Conway's Game Of Life",
+    skills: "HTML, CSS, JavaScript",
+    imageClass: "bg-gamoflife",
+    detailsLink: "/projectpage/7",
+    demoLink: "https://chaycoding.github.io/game-of-life/",
+    tag: "Web",
+  },
+  {
+    id: 15,
+    title: "Calculator",
+    skills: "HTML, CSS, JavaScript, React",
+    imageClass: "bg-calculator",
+    detailsLink: "/projectpage/8",
+    demoLink: "https://chaycoding.github.io/react-calculator/",
+    tag: "Web",
+  },
+];
+
+// 2. Reusable Card Component
+const ProjectCard = ({ project }) => {
+  const isMultiImage = Array.isArray(project.imageClass);
 
   return (
-    <div className="sm:mt-10 mt-60 grid grid-cols-1 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div className="h-24 w-24"></div>
+    <div className="group relative flex flex-col bg-[#111827]/80 backdrop-blur-md border border-slate-800 rounded-2xl overflow-hidden hover:border-[#0ea5e9]/50 hover:shadow-[0_0_20px_rgba(14,165,233,0.1)] transition-all duration-300 h-full">
+      
+      {/* Image Container */}
+      <div className="h-44 w-full overflow-hidden relative border-b border-slate-800/80">
+        {isMultiImage ? (
+          <div className="grid grid-cols-3 w-full h-full">
+            <div className={`${project.imageClass[0]} bg-cover bg-right-top w-full h-full transition-transform duration-500 group-hover:scale-105`}></div>
+            <div className={`${project.imageClass[1]} bg-cover bg-center w-full h-full transition-transform duration-500 group-hover:scale-105`}></div>
+            <div className={`${project.imageClass[2]} bg-cover bg-right-top w-full h-full transition-transform duration-500 group-hover:scale-105`}></div>
+          </div>
+        ) : (
+          <div className={`${project.imageClass} bg-cover bg-center w-full h-full transition-transform duration-700 group-hover:scale-110`}></div>
+        )}
+        
+        {/* Subtle Dark Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#111827] via-transparent to-transparent opacity-90"></div>
+
+        {/* Floating Category Badge */}
+        {project.tag && (
+          <div className="absolute top-3 right-3 bg-[#0a1120]/80 backdrop-blur-sm border border-slate-700 text-[#0ea5e9] text-xs font-mono px-3 py-1 rounded shadow-sm">
+            {project.tag}
+          </div>
+        )}
+      </div>
+
+     
+      <div className="p-6 flex flex-col flex-grow">
+        <h3 className="text-xl font-bold text-slate-100 leading-tight mb-2">
+          {project.title} {project.subtitle && <span className="text-[#0ea5e9] font-medium text-lg">- {project.subtitle}</span>}
+        </h3>
+        
+        <p className="text-xs font-mono text-slate-400 mb-6 flex-grow leading-relaxed">
+          <span className="text-slate-500">Skills:</span> {project.skills}
+        </p>
+
+       
+        <div className="flex gap-3 mt-auto">
+          <Link 
+            to={project.detailsLink} 
+            className="flex-1 bg-slate-800 hover:bg-[#0ea5e9] text-slate-300 hover:text-white border border-slate-700 hover:border-[#0ea5e9] transition-all duration-300 text-xs font-bold uppercase tracking-widest py-2.5 text-center rounded-lg"
+          >
+            Details
+          </Link>
+          
+          
+          {project.demoLink && (
+            <a 
+              href={project.demoLink} 
+              target="_blank" 
+              rel="noreferrer" 
+              className="flex-1 bg-transparent hover:bg-slate-800 text-[#0ea5e9] hover:text-slate-200 border border-[#0ea5e9]/30 hover:border-slate-600 transition-all duration-300 text-xs font-bold uppercase tracking-widest py-2.5 text-center rounded-lg"
+            >
+              Live Demo
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// 3. Main Export Component
+function Newestposts() {
+  return (
+    <div className="sm:mt-12 mt-32 grid grid-cols-1 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      
+      {/* AI Projects Section */}
+      <div className="mb-20">
+        <div className="flex items-center gap-4 mb-10">
+          <h2 className="text-2xl font-bold text-slate-100 tracking-tight">AI Projects</h2>
+          <div className="h-px flex-grow bg-slate-800"></div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {aiProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+      </div>
+
+      {/* Intermediate Projects Section */}
+      <div className="mb-20">
+        <div className="flex items-center gap-4 mb-10">
+          <h2 className="text-2xl font-bold text-slate-100 tracking-tight">Intermediate Modules</h2>
+          <div className="h-px flex-grow bg-slate-800"></div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {intermediateProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+      </div>
+
+      {/* Beginner Projects Section */}
       <div>
-        <h2 className="text-2xl font-bold mb-8 text-center ">
-          Intermediate projects
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-8">
-          {intermediateList.map((item, i) => (
-            <Card key={i} text={item} index={i} />
+        <div className="flex items-center gap-4 mb-10">
+          <h2 className="text-2xl font-bold text-slate-100 tracking-tight">Foundational Work</h2>
+          <div className="h-px flex-grow bg-slate-800"></div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {beginnerProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </div>
-      <div className=" mt-20">
-        <h2 className="text-2xl font-bold mb-8 text-center ">
-          Beginner projects
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-8">
-          {beginnerProjects.map((item, i) => (
-            <Card key={i} text={item} index={i} />
-          ))}
-        </div>
-      </div>
+
     </div>
   );
 }

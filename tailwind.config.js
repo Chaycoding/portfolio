@@ -5,7 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         balloons: `url(/src/components/images/highquality/bal.webp)`,
-        tower: `url(/src/components/images/highquality/thatimg.webp)`,
+        tower: `url(/src/components/images/highquality/hero.jpg)`,
         contacthero: `url(/src/components/images/highquality/contacthero.webp)`,
         rps: `url(/src/components/images/highquality/rps.jpg)`,
         imageparticle: `url(/src/components/images/highquality/imageparticle.jpg)`,
@@ -43,6 +43,8 @@ export default {
         auhappy: `url(/src/components/images/highquality/datascience/auhappy.jpg)`,
         coolcog: `url(/src/components/images/highquality/coolcog.svg)`,
         coolcogb: `url(/src/components/images/highquality/coolcogb.svg)`,
+        japai: `url(/src/components/images/highquality/japai.png)`,
+        aitox: `url(/src/components/images/highquality/aitox.png)`,
       },
       animation: {
         fade: "fadeOut 1s ease-in-out",

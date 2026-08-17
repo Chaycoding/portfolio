@@ -4,47 +4,45 @@ import CV from "../assets/CV.pdf";
 
 function Header() {
   const scrollPosition = useScrollPosition();
-  const scrollColour = scrollPosition > 0 ? "anicol" : "aniRevcol ";
-  const scrollHeader = `sticky top-0 z-20 duration-[1s] transition-all ${scrollColour}`;
+  
+  // Creates a clean, glassmorphic blur only when the user scrolls down
+  const scrollHeaderStyle = scrollPosition > 10 
+    ? "bg-[#050B14]/80 backdrop-blur-md border-b border-slate-800 shadow-sm" 
+    : "bg-transparent border-b border-transparent";
 
   return (
-    <div className={scrollHeader}>
-      <div className="w-full h-20 hidden items-center sm:flex ">
-        <div className="font-[Open Sans] text-white basis-4/6">
-          <div className="w-max">
-            <Link to="/">
-              <button className="ml-10 flex items-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] font-semibold ">
-                <div className="rounded-full border-2 border-white bg-tower bg-cover h-10 w-10"></div>
-                <h1 className="text-3xl ml-5">Chasith C. Hordagoda</h1>
-              </button>
-            </Link>
-          </div>
-        </div>
-        <div className="font-[Open Sans] font-semibold text-white basis-2/6 items-center flex gap-x-5 justify-center h-full">
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrollHeaderStyle}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        
+        {/* Left: Logo & Name */}
+        <Link to="/" className="flex items-center gap-4 group">
+          <div className="w-10 h-10 rounded-full border-2 border-slate-700 bg-tower bg-cover bg-center group-hover:border-[#0ea5e9] transition-all duration-300"></div>
+          <h1 className="text-xl font-bold text-slate-100 tracking-tight group-hover:text-white transition-colors">
+            Chasith C. Hordagoda
+          </h1>
+        </Link>
+
+        {/* Right: Navigation & Actions */}
+        <div className="hidden sm:flex items-center gap-8">
           <Link
             to="/contact"
-            className="relative items-center justify-start inline-block px-5 py-3 overflow-hidden font-bold rounded-full group"
+            className="text-sm font-mono tracking-wider text-slate-400 hover:text-[#0ea5e9] transition-colors"
           >
-            <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
-            <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-5"></span>
-            <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">
-              Contact me
-            </span>
+            Contact
           </Link>
+          
           <a
             href={CV}
-            className="relative items-center justify-start inline-block px-5 py-3 overflow-hidden font-bold rounded-full group"
+            target="_blank"
+            rel="noreferrer"
+            className="px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-slate-300 bg-slate-900/50 border border-slate-700 rounded-lg hover:bg-[#0ea5e9] hover:text-white hover:border-[#0ea5e9] hover:shadow-[0_0_15px_rgba(14,165,233,0.3)] transition-all duration-300"
           >
-            <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
-            <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-5"></span>
-            <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">
-              Download my CV!
-            </span>
-            <span className="absolute inset-0 border-2 border-white rounded-full"></span>
+            Download CV
           </a>
         </div>
+
       </div>
-    </div>
+    </header>
   );
 }
 
