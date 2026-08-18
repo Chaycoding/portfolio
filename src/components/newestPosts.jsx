@@ -8,10 +8,10 @@ const aiProjects = [
     id: 17,
     title: "Toxicity Prediction Engine",
     subtitle: "Machine Learning / Cheminformatics",
-    skills: "Python, DeepChem, RDKit, Matplotlib, Pandas, Scikit-Learn",
+    skills: "Python, DeepChem, RDKit, Matplotlib, Pandas, Scikit-Learn, streamlit, fastapi",
     imageClass: "bg-aitox", 
     detailsLink: "/projectpage/17",
-    demoLink: "", 
+    demoLink: "https://toxicity-ai-qnytt7jxxnfmtmwxwynukm.streamlit.app/", 
     tag: "AI & Science",
   },
   {
