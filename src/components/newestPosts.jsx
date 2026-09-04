@@ -48,6 +48,16 @@ const intermediateProjects = [
     tag: "Web",
   },
   {
+  id: 18,
+  title: "Book Boutique",
+  subtitle: "Mobile",
+  skills: "Flutter, Dart, Isar (local DB), Google Books API, share_plus, file_picker",
+  imageClass: "bg-bookboutique",
+  detailsLink: "/projectpage/18",
+  demoLink: "https://youtube.com/shorts/jMDRAQ6Pi5M?feature=share",
+  tag: "Flutter",
+},
+  {
     id: 3,
     title: "Weather App",
     skills: "React, JavaScript, Tailwind, CSS, APIs",

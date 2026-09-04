@@ -231,6 +231,7 @@ function ProjectPage() {
       ),
       visual: <ImageCarousel datatruth={true} list={["bg-cmine1", "bg-cmine2", "bg-cmine3"]} />,
     },
+    
     15: {
       title: "C++ To-Do List",
       skills: "C++, wxWidgets",
@@ -243,6 +244,38 @@ function ProjectPage() {
       ),
       visual: <ImageCarousel datatruth={false} id={15} list={["CTodo1", "CTodo2"]} />,
     },
+
+
+    
+    18: {
+  title: "Book Boutique",
+  subtitle: "Mobile",
+  skills: "Flutter, Dart, Isar (local DB), Google Books REST API, share_plus, file_picker",
+  description: (
+    <div className="space-y-4 text-slate-300">
+      <p>
+        A personal library manager built in Flutter, letting users search the Google Books API, save titles to an "Own It" or "Wishlist" shelf, and track reading status (Not Started / Reading / Finished) with a local Isar database.
+      </p>
+      <p>
+        <strong>Notable engineering decisions:</strong> mid-project I migrated from the original Isar package to the actively-maintained <code>isar_community</code> fork after the original was abandoned and broke under newer Android Gradle Plugin requirements. I also caught and fixed a hardcoded API key exposure by moving it to a restricted, environment-loaded key via <code>flutter_dotenv</code>.
+      </p>
+      <p>
+        The app supports full offline resilience with cached cover images, a JSON export/import system for backing up a user's library, and a custom Material 3 theme with Hero transitions between the library grid and book detail views.
+      </p>
+    </div>
+  ),
+visual: (
+  <iframe
+    className="w-full h-64 rounded-2xl"
+    src="https://www.youtube.com/embed/jMDRAQ6Pi5M?feature=share"
+    title="Book Boutique demo"
+    allowFullScreen
+  ></iframe>
+),
+  demoLink: "https://github.com/chaycoding/book-boutique",
+},
+
+
     16: {
       title: "Japanese AI Tutor",
       subtitle: "Fullstack / LLM Integration",
