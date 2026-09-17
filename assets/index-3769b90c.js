@@ -1,0 +1,1 @@
+import{_ as o}from"./index-d1acfc27.js";async function i(t,a=!0){await t.addParticleUpdater("wobble",async e=>{const{WobbleUpdater:r}=await o(()=>import("./WobbleUpdater-7d376e92.js"),["assets/WobbleUpdater-7d376e92.js","assets/index-d1acfc27.js","assets/index-b094c4b6.css"]);return new r(e)},a)}export{i as loadWobbleUpdater};
