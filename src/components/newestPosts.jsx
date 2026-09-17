@@ -11,7 +11,6 @@ const aiProjects = [
     skills: "Python, DeepChem, RDKit, Matplotlib, Pandas, Scikit-Learn, streamlit, fastapi",
     imageClass: "bg-aitox", 
     detailsLink: "/projectpage/17",
-    demoLink: "https://toxicity-ai-qnytt7jxxnfmtmwxwynukm.streamlit.app/", 
     tag: "AI & Science",
   },
   {
